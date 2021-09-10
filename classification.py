@@ -6,14 +6,13 @@ f=open(r'/home/lanpokn/Documents/vscode/python project/srtp/anomaly detect/TE RE
 sentimentlists = []
 for line in f:
     s = line.strip().split('\t')
-    print(s)
     sentimentlists.append(s)
 f.close()
 
 trains = []
-for line in sentimentlists:
-    train = line.split()
+for i in range(len(sentimentlists)):
+    train = sentimentlists[i][0].split()
     trains.append(train)
 
-df_train=pd.DataFrame(sentimentlists)
-print(format(df_train.shape))
+# df_train=pd.DataFrame(sentimentlists)
+print(len(trains[0]))
