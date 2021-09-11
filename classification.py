@@ -25,6 +25,7 @@ class TEDataset(Dataset):
     #X:trains,y:labels
     def __init__(self, X, y=None):
         self.data = torch.tensor(X)
+        #???
         if y is not None:
             y = y.astype(np.int)
             self.label = torch.LongTensor(y)
